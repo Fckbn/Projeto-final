@@ -1,0 +1,30 @@
+{
+  "name": "acantos-bar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional do Acantos Bar com autenticação local",
+  "scripts": {
+    "start": "ng serve --host 0.0.0.0 --port 3000",
+    "build": "ng build",
+    "test": "ng test --watch=false"
+  },
+  "dependencies": {
+    "@angular/animations": "^17.3.3",
+    "@angular/common": "^17.3.3",
+    "@angular/compiler": "^17.3.3",
+    "@angular/core": "^17.3.3",
+    "@angular/forms": "^17.3.3",
+    "@angular/platform-browser": "^17.3.3",
+    "@angular/platform-browser-dynamic": "^17.3.3",
+    "@angular/router": "^17.3.3",
+    "rxjs": "~7.4.0",
+    "tslib": "^2.3.1",
+    "zone.js": "~0.14.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.3",
+    "@angular/cli": "^17.3.3",
+    "@angular/compiler-cli": "^17.3.3",
+    "typescript": "~5.4.5"
+  }
+}

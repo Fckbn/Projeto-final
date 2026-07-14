@@ -1,0 +1,61 @@
+<div class="background-carousel">
+  <div
+    class="bg-slide"
+    *ngFor="let image of backgroundImages; let i = index"
+    [class.active]="i === currentBackgroundIndex"
+    [style.backgroundImage]="'url(' + image + ')'"
+  ></div>
+</div>
+<div class="page-shell">
+  <header class="topbar">
+    <a class="brand" routerLink="/home">
+      <span class="brand-mark">A</span>
+      <span>
+        <strong>Acantos Bar</strong>
+        <small>Restaurante</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menu" [attr.aria-expanded]="isMenuOpen">☰</button>
+
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/menu/almoco">Almoço</a>
+      <a routerLink="/menu/lanches">Lanches</a>
+      <a routerLink="/menu/bebidas">Bebidas</a>
+      <a routerLink="/contact">Contato</a>
+      <a *ngIf="appService.currentUser" routerLink="/cart">Carrinho</a>
+      <a *ngIf="appService.currentUser" routerLink="/settings">Configurações</a>
+      <a *ngIf="appService.isAdminLogged" routerLink="/admin">Admin</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="button ghost" *ngIf="!appService.currentUser" routerLink="/login">Entrar</button>
+      <button class="button primary" *ngIf="!appService.currentUser" routerLink="/register">Criar conta</button>
+      <button class="button ghost" *ngIf="appService.currentUser" (click)="logout()">Sair</button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" [class.open]="isMenuOpen" aria-label="Menu móvel">
+    <button class="mobile-nav-close" (click)="toggleMenu()" aria-label="Fechar menu">×</button>
+    <div class="mobile-profile" *ngIf="appService.currentUser">
+      <strong>{{ appService.currentUser.name }}</strong>
+      <span>{{ appService.currentUser.email }}</span>
+    </div>
+    <a routerLink="/home" (click)="toggleMenu()">Home</a>
+    <a routerLink="/menu/almoco" (click)="toggleMenu()">Almoço</a>
+    <a routerLink="/menu/lanches" (click)="toggleMenu()">Lanches</a>
+    <a routerLink="/menu/bebidas" (click)="toggleMenu()">Bebidas</a>
+    <a routerLink="/contact" (click)="toggleMenu()">Contato</a>
+    <a *ngIf="appService.currentUser" routerLink="/cart" (click)="toggleMenu()">Carrinho</a>
+    <a *ngIf="appService.currentUser" routerLink="/settings" (click)="toggleMenu()">Configurações</a>
+    <a *ngIf="appService.isAdminLogged" routerLink="/admin" (click)="toggleMenu()">Admin</a>
+    <button class="button ghost" *ngIf="appService.currentUser" (click)="logout(); toggleMenu()">Sair</button>
+    <button class="button ghost" *ngIf="!appService.currentUser" routerLink="/login" (click)="toggleMenu()">Entrar</button>
+    <button class="button primary" *ngIf="!appService.currentUser" routerLink="/register" (click)="toggleMenu()">Criar conta</button>
+  </nav>
+
+  <main [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+</div>
