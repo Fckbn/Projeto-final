@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
       <section class="section-block contact-block">
         <div class="section-heading">
           <p class="eyebrow">Contato</p>
-          <h2>Entre em contato e monte a sua noite conosco.</h2>
+          <h2>Entre em contato e faça seu pedido.</h2>
         </div>
         <article class="contact-card">
-          <p><strong>Telefone:</strong> (11) 99999-0000</p>
-          <p><strong>Endereço:</strong> Rua das Flores, 123 — São Paulo</p>
-          <p><strong>Horário:</strong> terça a domingo, das 18h às 00h</p>
+          <p><strong>Telefone/WhatsApp:</strong> (71) 99243-1981</p>
+          <p><strong>Endereço:</strong> Salvador, BA</p>
+          <p><strong>Horário:</strong> terça a domingo, das 8h às 20h</p>
         </article>
       </section>
     </div>

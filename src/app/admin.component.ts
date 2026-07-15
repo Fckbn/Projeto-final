@@ -34,8 +34,6 @@ import { AppService, MenuItem } from './app.service';
               <input type="number" min="0" step="0.01" [(ngModel)]="itemPrice" name="itemPrice" required />
             </label>
             <label class="checkbox-row">
-              <input type="checkbox" [(ngModel)]="itemAvailable" name="itemAvailable" />
-              <span>Disponível</span>
             </label>
             <button class="button primary" type="submit">Adicionar item</button>
           </form>

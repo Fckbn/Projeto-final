@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       <section class="hero">
         <div class="hero-copy">
           <h1>Seu favorito para almoçar :) </h1>
-          <p class="hero-text">No Acantos Bar, o ambiente acolhedor encontra pratos bem feitos, drinks e petiscos para cada visita.</p>
+          <p class="hero-text">No Acantos Bar, o ambiente acolhedor encontra pratos bem feitos, bebidas e petiscos para cada visita.</p>
           <div class="hero-actions">
             <a class="button primary" routerLink="/menu/almoco">Almoço</a>
             <a class="button outline" routerLink="/menu/lanches">Lanches</a>

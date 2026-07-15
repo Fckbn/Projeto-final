@@ -16,7 +16,7 @@
       </span>
     </a>
 
-    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menu" [attr.aria-expanded]="isMenuOpen">☰</button>
+    <button class="menu-toggle" [class.open]="isMenuOpen" (click)="toggleMenu()" aria-label="Abrir menu" [attr.aria-expanded]="isMenuOpen">☰</button>
 
     <nav class="nav-links" aria-label="Navegação principal">
       <a routerLink="/home">Home</a>
